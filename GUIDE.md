@@ -7,6 +7,7 @@ This is V2 of the guide that went viral. Huge thanks to u/headset38, u/tulensrma
 **What's new in V2:**
 - Part 7: Skills & Hooks — deterministic enforcement over behavioral suggestion
 - Browser MCP comparison guide — Playwright vs Browser MCP vs Browser Use
+- Team workflows & Compounding Engineering — evolving CLAUDE.md, @.claude in PRs
 - [GitHub repo](https://github.com/TheDecipherist/claude-code-mastery) with ready-to-use templates, hooks, and skills
 
 ---
@@ -82,6 +83,62 @@ Your global CLAUDE.md creates a **behavioral gatekeeper** — even if Claude has
 | 1 | Behavioral rules | Global CLAUDE.md "NEVER" rules |
 | 2 | Access control | Deny list in settings.json |
 | 3 | Git safety | .gitignore |
+
+### Team Workflows: Evolving CLAUDE.md
+
+Solo developers maintain their own CLAUDE.md. But what about teams? [Boris Cherny shares how Anthropic's Claude Code team does it](https://x.com/bcherny/status/2007179832300581177):
+
+> "Our team shares a single CLAUDE.md for the Claude Code repo. We check it into git, and the whole team contributes multiple times a week. Anytime we see Claude do something incorrectly we add it to the CLAUDE.md, so Claude knows not to do it next time."
+
+**The key insight:** CLAUDE.md isn't a static document you write once. It's a **living file that evolves** with your codebase.
+
+#### The Pattern: Mistakes Become Documentation
+
+```
+Claude makes mistake → You fix it → You add rule to CLAUDE.md → Claude never makes that mistake again
+```
+
+Example workflow:
+1. Claude uses deprecated API in PR
+2. Reviewer catches it
+3. Team adds to CLAUDE.md: `## API Guidelines\nNEVER use deprecated v1 endpoints. Always use v2.`
+4. Future Claude sessions know to avoid v1
+
+#### @.claude in PR Reviews
+
+Using the [Claude Code GitHub Action](https://docs.anthropic.com/en/docs/claude-code/github-actions), you can tag `@.claude` directly in PR comments:
+
+```
+Reviewer comment on PR #142:
+"@.claude add to CLAUDE.md: Always use our internal logger instead of console.log"
+```
+
+Claude updates CLAUDE.md as part of the PR itself. The lesson gets documented where it was learned.
+
+**To set this up:**
+```bash
+claude /install-github-action
+```
+
+#### Compounding Engineering
+
+This workflow embodies a concept called [Compounding Engineering](https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents):
+
+> "Each unit of engineering work should make subsequent units easier — not harder."
+
+The traditional approach: fix bug, move on, repeat same mistake later.
+
+The compounding approach: fix bug, document why, never repeat.
+
+```
+Plan → Work → Review → Compound → (better) Plan → ...
+```
+
+**The 80/20 inversion:** Spend 80% on planning and review, 20% on execution. Each cycle feeds learnings back into the system. Your CLAUDE.md becomes institutional knowledge that compounds over time.
+
+**Resources:**
+- [Compound Engineering Plugin](https://github.com/EveryInc/compound-engineering-plugin) — Claude Code plugin implementing this workflow
+- [How Every Codes with Agents](https://every.to/chain-of-thought/compound-engineering-how-every-codes-with-agents) — Deep dive into the methodology
 
 ---
 
