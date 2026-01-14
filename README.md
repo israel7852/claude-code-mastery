@@ -243,4 +243,4 @@ MIT License - See [LICENSE](./LICENSE)
 
 ---
 
-*Built with ❤️ by [TheDecipherist](https://github.com/TheDecipherist) and the Claude Code community*
+*Built with ❤️ by [TheDecipherist](https://thedecipherist.com?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=author-link) and the Claude Code community*
