@@ -139,17 +139,25 @@ header nav ul:last-child a:hover {
   background: var(--bg-tertiary);
 }
 
-/* GitHub Button */
-.github-btn {
-  display: inline-flex;
+/* Nav Icon Button */
+.nav-icon {
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
-  background: var(--bg-tertiary) !important;
-  border: 1px solid var(--border-color);
+  padding: 0 !important;
 }
 
-.github-btn:hover {
-  border-color: var(--border-hover) !important;
+.nav-icon img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.nav-icon:hover img {
+  border-color: var(--accent-cyan);
+  transform: scale(1.05);
 }
 
 /* Theme Toggle */
