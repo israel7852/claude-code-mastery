@@ -812,7 +812,7 @@ footer .footer-projects {
 @media (max-width: 768px) {
   main.container {
     grid-template-columns: 1fr;
-    padding-top: 5rem;
+    padding-top: 0rem;
   }
 
   #sidebar {
@@ -829,6 +829,7 @@ footer .footer-projects {
 
   #content h2 {
     font-size: 1.5rem;
+    margin-top:0px;
   }
 
   .brand-author {
